@@ -11,6 +11,8 @@ O projeto visa a montagem de um simples controle arcade, com manete e botões.
 
 <h3>Esquemático</h3>
 
+Como é possível notar, trate-se apenas de vários botões e um módulo analótico conectados ao Arduino Pro Micro: 
+
 ![](images/esquematico.png)
 
 <h3>Placa</h3>
