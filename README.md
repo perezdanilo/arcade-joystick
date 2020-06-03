@@ -11,6 +11,8 @@ O projeto visa a montagem de um simples controle arcade, com manete e botões.
 
 <h3>Esquemático</h3>
 
+![](images/esquematico.png)
+
 <h3>Placa</h3>
 
 <h3>Teste</h3>
