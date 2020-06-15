@@ -40,7 +40,7 @@ void setup() {
   pinMode(7,  INPUT_PULLUP);
   pinMode(8,  INPUT_PULLUP);
   pinMode(9,  INPUT_PULLUP);
-//  calibrate();
+  calibrate();
 }
 
 void loop() {
