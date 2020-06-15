@@ -14,7 +14,7 @@ Como é possível notar, trate-se apenas de vários botões e um módulo analóg
 
 ![](images/esquematico.png)
 
-Software
+<h3>Software</h3>
 
 ```c
 //including a library
