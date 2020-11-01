@@ -1,12 +1,12 @@
 # Gamepad utilizando Arduino Pro Micro
 
-O projeto visa a montagem de um simples controle arcade, com manete e botões.
+O projeto visa a montagem de um joystick no estilo arcade, com botões e comando.
 
 <h3>Materiais</h3>
 
 - Arduino Pro Micro
-- Push buttons
-- Analógico de Playstation 2
+- Botões
+- Comando
 
 <h3>Esquemático</h3>
 
