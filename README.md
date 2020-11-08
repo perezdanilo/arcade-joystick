@@ -10,28 +10,20 @@ O projeto visa a montagem de um joystick no estilo arcade, com botões e comando
 
 <h3>Esquemático</h3>
 
-Como é possível notar, trate-se apenas de vários botões e um módulo analógico conectados ao Arduino Pro Micro: 
+Como é possível notar, trate-se apenas de vários botões ligados às entradas e ground do Arduino Pro Micro: 
 
 ![](images/esquematico.png)
 
 <h3>Software</h3>
 
 ```c
-//including a library
 #include <Gamepad.h>
-
-//initialize a centers of axises for calibration
-int leftXcenter = 500;
-int leftYcenter = 500;
-double multiplierLX = 0.254; //127 / 500
-double multiplierLY = 0.254;
 
 //Initializing a Gamepad
 Gamepad gp;
 void setup() {
   //initializing inputs
-  pinMode(A2, INPUT);
-  pinMode(A1, INPUT);
+ 
   pinMode(2,  INPUT_PULLUP);
   pinMode(3,  INPUT_PULLUP);
   pinMode(4,  INPUT_PULLUP);
@@ -40,29 +32,24 @@ void setup() {
   pinMode(7,  INPUT_PULLUP);
   pinMode(8,  INPUT_PULLUP);
   pinMode(9,  INPUT_PULLUP);
-  calibrate();
+  pinMode(10,  INPUT_PULLUP);
+  pinMode(16,  INPUT_PULLUP);
+  pinMode(14,  INPUT_PULLUP);
+  pinMode(15,  INPUT_PULLUP);
+  pinMode(A0,  INPUT_PULLUP);
+  pinMode(A1,  INPUT_PULLUP);
+  
 }
 
 void loop() {
-  int lx, ly;
-  lx = analogRead(A1);
-  ly = analogRead(A0);
-  
-  //we need to convert a 0-1000 to -127 - 127
-  lx = floor((lx - leftXcenter) * multiplierLX);
-  ly = floor((ly - leftYcenter) * multiplierLY);
-  if(lx > 127) lx = 127;
-  if(ly > 127) ly = 127;
-  gp.setLeftXaxis(lx);
-  //because i have placed a thumbstick in breadboard, i must invert a Y axis and swap X and Y axises
-  gp.setLeftYaxis(ly);
+ 
   
   int pin2;
   pin2 = digitalRead(2);
   if(pin2 == LOW)
-    gp.setButtonState(11, true);
+    gp.setButtonState(0, true);
   else
-    gp.setButtonState(11, false);
+    gp.setButtonState(0, false);
 
   int pino3;
   pino3 = digitalRead(3);
@@ -93,7 +80,7 @@ void loop() {
     gp.setButtonState(4, false);
 
   int pino7;
-  pino7 = digitalRead(3);
+  pino7 = digitalRead(7);
   if(pino7 == LOW)
     gp.setButtonState(5, true);
   else
@@ -102,42 +89,60 @@ void loop() {
   int pino8;
   pino8 = digitalRead(8);
   if(pino8 == LOW)
-    gp.setButtonState(7, true);
-  else
-    gp.setButtonState(7, false);
-
-  int pino9;
-  pino9 = digitalRead(9);
-  if(pino9 == LOW)
     gp.setButtonState(6, true);
   else
     gp.setButtonState(6, false);
 
-  delay(20);
-}
+  int pino9;
+  pino9 = digitalRead(9);
+  if(pino9 == LOW)
+    gp.setButtonState(7, true);
+  else
+    gp.setButtonState(7, false);
 
-void calibrate()
-{
-  int lx, ly;
-  int i = 0;
-  while(i < 8)
-  {
-    lx = analogRead(A1);
-    ly = analogRead(A0);
-    bool validLX = lx > (leftXcenter - 100) && lx < (leftXcenter + 100);
-    bool validLY = ly > (leftYcenter - 100) && ly < (leftYcenter + 100);
-    if(validLX && validLY)
-    {
-      i++;
-      //nothing to do here!
-    }
-    else i = 0;
-    delay(20);
-  }
-  leftXcenter = lx;
-  leftYcenter = ly;
-  multiplierLX = (double)127 / (double)lx;
-  multiplierLY = (double)127 / (double)ly;
+  int pino10;
+  pino10 = digitalRead(10);
+  if(pino10 == LOW)
+    gp.setButtonState(8, true);
+  else
+    gp.setButtonState(8, false);
+
+  int pino16;
+  pino16 = digitalRead(16);
+  if(pino16 == LOW)
+    gp.setButtonState(9, true);
+  else
+    gp.setButtonState(9, false);
+
+  int pino14;
+  pino14 = digitalRead(14);
+  if(pino14 == LOW)
+    gp.setButtonState(10, true);
+  else
+    gp.setButtonState(10, false);
+
+  int pino15;
+  pino15 = digitalRead(15);
+  if(pino15 == LOW)
+    gp.setButtonState(11, true);
+  else
+    gp.setButtonState(11, false);
+
+  int pinoA0;
+  pinoA0 = digitalRead(A0);
+  if(pinoA0 == LOW)
+    gp.setButtonState(12, true);
+  else
+    gp.setButtonState(12, false);
+
+  int pinoA1;
+  pinoA1 = digitalRead(A1);
+  if(pinoA1 == LOW)
+    gp.setButtonState(13, true);
+  else
+    gp.setButtonState(13, false);
+
+  delay(20);
 }
 ```
 
