@@ -12,7 +12,7 @@ O projeto visa a montagem de um joystick no estilo arcade, com botões e comando
 
 Como é possível notar, trate-se apenas de vários botões ligados às entradas e ground do Arduino Pro Micro: 
 
-![](images/esquematico.png)
+
 
 
 Para facilitar as conexões entre botões e Arduino, foi montado um adaptador entre as GPIO, VCC e GND para bornes:
