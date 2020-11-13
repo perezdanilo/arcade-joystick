@@ -15,9 +15,13 @@ Como é possível notar, trate-se apenas de vários botões ligados às entradas
 ![](images/esquematico.png)
 
 
-Para facilitar as conexões entre botões e Arduino, montei um adaptador entre as GPIO, VCC e GND para bornes:
+Para facilitar as conexões entre botões e Arduino, foi montado um adaptador entre as GPIO, VCC e GND para bornes:
 
 ![](images/adapt.jpeg)
+
+Os botões são ligados a micro switches. Como não possuo os cabos normalmente usados, soldei um fio em cada terminal dos micro switches. A outra ponta dos cabos foi colocada nos bornes:
+
+
 
 <h3>Software</h3>
 
