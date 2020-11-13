@@ -21,9 +21,20 @@ Para facilitar as conexões entre botões e Arduino, foi montado um adaptador en
 
 Os botões são ligados a micro switches. Como não possuo os cabos normalmente usados, soldei um fio em cada terminal dos micro switches. A outra ponta dos cabos foi colocada nos bornes:
 
+![](images/interior.jpg)
+É, não ficou bonito. Pretendo unir os GNDs dos micro switches para diminuir a quantidade de fios.
 
+A ordem de ligação das GPIO de pouco importa, pois a configuração dos comandos é feita nos próprios emuladores.
+
+O lado de fora:
+
+![](images/exterior.jpg)
+
+Futuramente enveloparei a parte de cima da caixa, pintarei as laterais e parte inferior e possivelmente incluirei LEDs nos botões.
 
 <h3>Software</h3>
+
+A biblioteca Gamepad atendeu muito bem às necessidades do Joystick:
 
 ```c
 #include <Gamepad.h>
