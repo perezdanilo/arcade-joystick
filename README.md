@@ -7,6 +7,7 @@ O projeto visa a montagem de um joystick no estilo arcade, com botões e comando
 - Arduino Pro Micro
 - Botões
 - Comando
+- Caixa de mdf 20x30x9
 
 <h3>Esquemático</h3>
 
