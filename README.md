@@ -16,13 +16,13 @@ O projeto visa a montagem de um joystick no estilo arcade, com botões e comando
 Como é possível notar, trate-se apenas de vários botões ligados às entradas e ground do Arduino Pro Micro: 
 
 
-
+<h3>Montagem do Hardware</h3>
 
 Para facilitar as conexões entre botões e Arduino, foi montado um adaptador entre as GPIO, VCC e GND para bornes:
 
 ![](images/adapt.jpeg)
 
-Os botões são ligados a micro switches. Como não possuo os cabos normalmente usados, soldei um fio em cada terminal dos micro switches. A outra ponta dos cabos foi colocada nos bornes:
+Os botões são ligados a micro switches. Como não possuo os cabos recomendados, soldei um fio em cada terminal dos micro switches. A outra ponta dos cabos foi colocada nos bornes:
 
 ![](images/interior.jpg)
 É, não ficou bonito. Pretendo unir os GNDs dos micro switches para diminuir a quantidade de fios.
