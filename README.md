@@ -11,6 +11,8 @@ O projeto visa a montagem de um joystick no estilo arcade, com botões e comando
 
 <h3>Esquemático</h3>
 
+![](images/esquema.png)
+
 Como é possível notar, trate-se apenas de vários botões ligados às entradas e ground do Arduino Pro Micro: 
 
 
