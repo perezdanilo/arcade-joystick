@@ -36,8 +36,8 @@ O lado de fora:
 Futuramente enveloparei a parte de cima da caixa, pintarei as laterais e parte inferior e possivelmente incluirei LEDs nos botões.
 
 Atualização: montei mais um controle e envelopei ambos (um para minha sobrinha e outro para mim). Também adicionei leds nos botões:
-![](images/controle 1.jpeg)
-![](images/controle 2.jpeg)
+![](images/controle 1.jpg)
+![](images/controle 2.jpg)
 
 
 <h3>Software</h3>
